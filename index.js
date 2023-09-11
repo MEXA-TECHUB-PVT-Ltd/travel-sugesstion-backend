@@ -25,6 +25,7 @@ import savedPlacesRoute from './routes/savedPlaces.routes.js';
 import uploadPlaceImageRoute from './routes/uploadPlaceImages.routes.js';
 import blogRoute from './routes/blog.routes.js';
 import accessTypeRoute from './routes/accessType.routes.js';
+import insightRoute from './routes/insights.routes.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
@@ -56,6 +57,7 @@ app.use('/restaurantCategory', restaurantCategoryRoute);
 app.use('/uploadPlaceImages', uploadPlaceImageRoute);
 app.use('/blog', blogRoute);
 app.use('/accessType', accessTypeRoute);
+app.use('/insight', insightRoute);
 const corsOptions = {
   origin: 'http://127.0.0.1:5173'
 };
