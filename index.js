@@ -21,6 +21,9 @@ import tipRoute from './routes/tip.routes.js';
 import ratingRoute from './routes/rating.routes.js';
 import reviewRoute from './routes/review.routes.js';
 import likeRoute from './routes/likes.routes.js';
+import savedPlacesRoute from './routes/savedPlaces.routes.js';
+import uploadPlaceImageRoute from './routes/uploadPlaceImages.routes.js';
+// import blogRoute from './routes/blog.routes.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
@@ -46,7 +49,11 @@ app.use('/tip', tipRoute);
 app.use('/rating', ratingRoute);
 app.use('/like', likeRoute);
 app.use('/review', reviewRoute);
+app.use('/savedPlaces', savedPlacesRoute);
+
 app.use('/restaurantCategory', restaurantCategoryRoute);
+app.use('/uploadPlaceImages', uploadPlaceImageRoute);
+// app.use('/blog', blogRoute);
 const corsOptions = {
   origin: 'http://127.0.0.1:5173'
 };
