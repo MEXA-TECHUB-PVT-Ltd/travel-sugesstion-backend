@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import cors from 'cors'
 import bodyParser from "body-parser";
 import path from "path";
+import dbConfig from "./db.config/index.js"
 import { fileURLToPath } from "url";
 import setCorsHeaders from './midllewares/corsMiddleware.js';
 import questionRoute from './routes/question.routes.js';
